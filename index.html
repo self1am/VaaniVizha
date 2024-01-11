@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <title>Document</title>
+</head>
+<body>
+
+
+        <div class="countdown-container">
+            <div class="countdown-circle">
+                <div class="countdown-dot"></div>
+                <h1 id="countdown">00:00:00</h1>
+            </div>
+            
+        </div>
+
+
+    <a href="#" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="sin vani vizha1.png" class="cover-image" />
+          </div>
+          <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
+          <img src="sin Invitation.png" class="character" />
+        </div>
+        <div class="card">
+            <div class="wrapper">
+              <img src="tamil vani vizha2.png" class="cover-image" />
+            </div>
+            <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
+            <img src="tamil Invitation.png" class="character" />
+          </div>
+      </a>
+
+      <a href="#" alt="Mythrill" target="_blank">
+        
+      </a>
+      
+      <!-- <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+          </div>
+          <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+          <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+        </div>
+      </a> -->
+    
+
+      <script src="script.js"></script>
+      <script>
+        // Set the date we're counting down to
+const countDownDate = new Date("Jan 12, 2024 14:00:00").getTime();
+
+// Update the countdown every 1 second
+const x = setInterval(function() {
+    // Get the current date and time
+    const now = new Date().getTime();
+
+    // Calculate the time remaining
+    const distance = countDownDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
+      </script>
+</body>
+</html>

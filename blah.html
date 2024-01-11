@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    :root{
+        --card-height: 500px;
+    --card-width: calc(var(--card-height) / 1.6108);
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .card {
+        width: var(--card-width);
+    height: var(--card-height);
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .invitation-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .lang-button {
+      cursor: pointer;
+      background-color: #3498db;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .lang-button:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="invitationCard">
+  <div class="invitation-text" id="textContainer">
+    <img src="tamil Invitation.png" id="englishText" alt="">
+    <img src="sin Invitation.png" id="spanishText" alt="">
+    <button class="lang-button" onclick="toggleLanguage()">Toggle Language</button>
+  </div>
+</div>
+
+<script>
+  function toggleLanguage() {
+    const englishText = document.getElementById('englishText');
+    const spanishText = document.getElementById('spanishText');
+
+    englishText.style.display = (englishText.style.display === 'none') ? 'block' : 'none';
+    spanishText.style.display = (spanishText.style.display === 'none') ? 'block' : 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const card = document.getElementById('invitationCard');
+    const textContainer = document.getElementById('textContainer');
+
+    card.style.animation = 'fadeIn 2s ease-out';
+    textContainer.style.animation = 'fadeIn 2s ease-out';
+  });
+</script>
+
+</body>
+</html>
