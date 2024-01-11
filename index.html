@@ -19,22 +19,36 @@
         </div>
 
 
-    <div style="display: flex;">
-        <div class="card">
-          <div class="wrapper">
-            <img src="sin vani vizha1.png" class="cover-image" />
+        <div style="display: flex;">
+          <div class="card" onclick="openModal('sin Invitation.png')">
+            <div class="wrapper">
+              <img src="sin vani vizha1.png" class="cover-image" />
+            </div>
+            <img src="sin Invitation.png" class="character" />
           </div>
-          <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
-          <img src="sin Invitation.png" class="character" />
-        </div>
-        <div class="card">
+          <div class="card" onclick="openModal('tamil Invitation.png')">
             <div class="wrapper">
               <img src="tamil vani vizha2.png" class="cover-image" />
             </div>
-            <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
             <img src="tamil Invitation.png" class="character" />
+          </div>
         </div>
+
+      <div id="modal">
+        <img id="modalImage" alt="">
+        <span class="close" onclick="closeModal()">&times;</span>
       </div>
+
+      <script>
+        function openModal(imageSrc) {
+  document.getElementById('modalImage').src = imageSrc;
+  document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+      </script>
       
       <!-- <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
         <div class="card">
