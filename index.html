@@ -47,6 +47,32 @@
 
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
+
+  let clickCount = 0;
+
+function openModal(imageSrc) {
+  clickCount++;
+
+  if (clickCount === 1) {
+    setTimeout(() => {
+      if (clickCount === 1) {
+        // Single click
+        // Perform single-click action if needed
+      } else {
+        // Double click
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('modal').style.display = 'flex';
+      }
+
+      clickCount = 0;
+    }, 300); // Adjust the time window for detecting double-click
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
 }
       </script>
       
