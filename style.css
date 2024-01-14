@@ -255,7 +255,7 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(195, 61, 61);
   text-decoration: none;
   cursor: pointer;
 }
